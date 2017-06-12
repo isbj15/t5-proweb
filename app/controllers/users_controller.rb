@@ -4,8 +4,9 @@ class UsersController < ApplicationController
     	end
     	def create
               @user = User.new(user_params)
+		@user.role = "user"
               if @user.save
-                          redirect_to @user, notice: "Usuário foi criado com sucesso!"
+                         redirect_to @user, notice: "Usuário foi criado com sucesso!"
                           #tire o método de comentário quando criar o helper.
                           #Usuário depois de cadastrar-se acessa o sistema automaticamente
   	#sign_in(@user)
