@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @civilian.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @civilian.last_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @civilian.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @civilian.city %>
+</p>
+
+<%= link_to 'Edit', edit_civilian_path(@civilian) %> |
+<%= link_to 'Back', civilians_path %>

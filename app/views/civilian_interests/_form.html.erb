@@ -1,0 +1,25 @@
+<%= form_for(@civilian_interest) do |f| %>
+  <% if @civilian_interest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@civilian_interest.errors.count, "error") %> prohibited this civilian_interest from being saved:</h2>
+
+      <ul>
+      <% @civilian_interest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :civilian_id %><br>
+    <%= f.text_field :civilian_id %>
+  </div>
+  <div class="field">
+    <%= f.label :interest_id %><br>
+    <%= f.text_field :interest_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Civilian:</strong>
+  <%= @civilian_interest.civilian %>
+</p>
+
+<p>
+  <strong>Interest:</strong>
+  <%= @civilian_interest.interest %>
+</p>
+
+<%= link_to 'Edit', edit_civilian_interest_path(@civilian_interest) %> |
+<%= link_to 'Back', civilian_interests_path %>
