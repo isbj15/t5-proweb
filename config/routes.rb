@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   resources :civilian_interests
   resources :shoes
   resources :jobs
   resources :civilians
   resources :interests
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
