@@ -1,25 +1,44 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.wrapper {
-        width: 50% !important;
-        height: 70%;
+.wrapper--sign {
+        width: 50%;
+        height: 50%;
         background: #dddddd;
         color: black;
         margin-left: auto;
         margin-right: auto;
-        display: block;
-	margin-top: 50px;
+        display: table;
+	margin-top: 100px;
 }
 
-.content {
-	width: 100% !important;
+.content--sign {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .wrap--sign {
-	width: 40%;
+	vertical-align: middle;
+	width: 45%;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+
+	p {
+		text-align: right;
+	}
 }
 
+#session_login, #session_password {
+	width: 97%;
+}
+
+.field {
+	font-size: 15px;
+}
+
+.actions {
+	text-align: right;
+	margin-bottom: 15px;
+}

@@ -8,8 +8,14 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
+<% unless request.path == sign_in_path %>
 <div class="wrapper">
 	<div class="content">
+<% end %>
+<% unless request.path != sign_in_path %>
+<div class="wrapper--sign">
+	<div class="content--sign">
+<% end %>
 		<%= yield %>
 	</div>
 </div>
