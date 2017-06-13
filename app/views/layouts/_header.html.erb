@@ -1,0 +1,25 @@
+ <header>
+    <div>
+      <nav>
+        <ul>
+          <% if logged_in? %>
+            <li><%= link_to "Users", users_path %></li>
+            <li>
+            <ul>
+            	<li><%= link_to "Profile", current_user %></li>
+                <div class="aba"><%= link_to 'Civilians', civilians_path %></div>
+                <div class="aba"><%= link_to 'Jobs', jobs_path %></div>
+                <div class="aba"><%= link_to 'Interests', interests_path %></div>
+                <div class="aba"><%= link_to 'Shoes', shoes_path %></div>
+                <div class="aba"><%= link_to 'Civilians-Interests', civilian_interests_path %></div>
+		<li><%= link_to "Settings", '#' %></li>
+                <li><%= link_to "Log out", sign_out_path, method: "delete" %></li>
+            </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "Log in", root_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
