@@ -17,8 +17,10 @@
         <td><%= civilian_interest.civilian %></td>
         <td><%= civilian_interest.interest %></td>
         <td><%= link_to 'Show', civilian_interest %></td>
-        <td><%= link_to 'Edit', edit_civilian_interest_path(civilian_interest) %></td>
-        <td><%= link_to 'Destroy', civilian_interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% if current_user.role == "admin" %>
+        	<td><%= link_to 'Edit', edit_civilian_interest_path(civilian_interest) %></td>
+        	<td><%= link_to 'Destroy', civilian_interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<%end%>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,6 @@
 
 <br>
 
-<%= link_to 'New Civilian interest', new_civilian_interest_path %>
+<% if current_user.role == "admin" %>
+	<%= link_to 'New Civilian interest', new_civilian_interest_path %>
+<%end%>

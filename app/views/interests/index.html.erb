@@ -15,8 +15,10 @@
       <tr>
         <td><%= interest.name %></td>
         <td><%= link_to 'Show', interest %></td>
-        <td><%= link_to 'Edit', edit_interest_path(interest) %></td>
-        <td><%= link_to 'Destroy', interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% if current_user.role == "admin" %>
+        	<td><%= link_to 'Edit', edit_interest_path(interest) %></td>
+        	<td><%= link_to 'Destroy', interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<%end%>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Interest', new_interest_path %>
+<% if current_user.role == "admin" %>
+	<%= link_to 'New Interest', new_interest_path %>
+<%end%>

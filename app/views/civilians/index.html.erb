@@ -20,14 +20,18 @@
         <td><%= civilian.last_name %></td>
         <td><%= civilian.address %></td>
         <td><%= civilian.city %></td>
-        <td><%= link_to 'Show', civilian %></td>
-        <td><%= link_to 'Edit', edit_civilian_path(civilian) %></td>
-        <td><%= link_to 'Destroy', civilian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+	<td><%= link_to 'Show', civilian %></td>
+
+	<% if current_user.role == "admin" %>
+        	<td><%= link_to 'Edit', edit_civilian_path(civilian) %></td>
+        	<td><%= link_to 'Destroy', civilian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<%end%>
+	</tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Civilian', new_civilian_path %>
+<% if current_user.role == "admin" %>
+	<%= link_to 'New Civilian', new_civilian_path %>
+<%end%>

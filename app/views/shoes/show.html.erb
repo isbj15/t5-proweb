@@ -15,5 +15,7 @@
   <%= @shoe.brand %>
 </p>
 
-<%= link_to 'Edit', edit_shoe_path(@shoe) %> |
+<% if current_user.role == "admin" %>
+	<%= link_to 'Edit', edit_shoe_path(@shoe) %> |
+<%end%>
 <%= link_to 'Back', shoes_path %>

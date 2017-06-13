@@ -11,17 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170612215742) do
-
-  create_table "civilian_interests", force: :cascade do |t|
-    t.integer  "civilian_id"
-    t.integer  "interest_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "civilian_interests", ["civilian_id"], name: "index_civilian_interests_on_civilian_id"
-  add_index "civilian_interests", ["interest_id"], name: "index_civilian_interests_on_interest_id"
+ActiveRecord::Schema.define(version: 20170612225818) do
 
   create_table "civilians", force: :cascade do |t|
     t.string   "first_name"
@@ -31,6 +21,16 @@ ActiveRecord::Schema.define(version: 20170612215742) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "civilians_interests", force: :cascade do |t|
+    t.integer  "civilian_id"
+    t.integer  "interest_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "civilians_interests", ["civilian_id"], name: "index_civilian_interests_on_civilian_id"
+  add_index "civilians_interests", ["interest_id"], name: "index_civilian_interests_on_interest_id"
 
   create_table "interests", force: :cascade do |t|
     t.string   "name"
@@ -56,5 +56,13 @@ ActiveRecord::Schema.define(version: 20170612215742) do
   end
 
   add_index "shoes", ["civilian_id"], name: "index_shoes_on_civilian_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "login"
+    t.string   "role"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
+  end
 
 end
