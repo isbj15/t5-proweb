@@ -1,3 +1,13 @@
 // Place all the styles related to the civilians controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+td, th {
+	border: 1px black solid;
+	width: 10%;
+	margin-left: 5px;
+	text-align: center;
+}
+
+.noborder {
+	border: 0 black solid;
+}

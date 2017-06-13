@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Civilians</h1>
+<br>
+<h1>Civilians</h1>
 
 <table>
   <thead>
@@ -10,7 +10,7 @@
       <th>Last name</th>
       <th>Address</th>
       <th>City</th>
-      <th colspan="3"></th>
+      <th class="noborder" colspan="3"></th>
     </tr>
   </thead>
 
@@ -22,11 +22,11 @@
         <td><%= civilian.last_name %></td>
         <td><%= civilian.address %></td>
         <td><%= civilian.city %></td>
-	<td><%= link_to 'Show', civilian %></td>
+	<td class="link"><%= link_to 'Show', civilian %></td>
 
 	<% if can_access? %>
-        	<td><%= link_to 'Edit', edit_civilian_path(civilian) %></td>
-        	<td><%= link_to 'Destroy', civilian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        	<td class="link"><%= link_to 'Edit', edit_civilian_path(civilian) %></td>
+        	<td class="link"><%= link_to 'Destroy', civilian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	<%end%>
 	</tr>
     <% end %>
