@@ -20,5 +20,7 @@
   <%= @civilian.city %>
 </p>
 
-<%= link_to 'Edit', edit_civilian_path(@civilian) %> |
+<% if current_user.role == "admin" %>
+	<%= link_to 'Edit', edit_civilian_path(@civilian) %> |
+<%end%>
 <%= link_to 'Back', civilians_path %>
