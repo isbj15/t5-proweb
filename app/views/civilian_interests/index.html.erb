@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Civilian Interests</h1>
+<br>
+<h1>Civilian-Interests Relations</h1>
 
 <table>
   <thead>
     <tr>
       <th>Civilian</th>
       <th>Interest</th>
-      <th colspan="3"></th>
+      <th class="noborder" colspan="3"></th>
     </tr>
   </thead>
 
@@ -16,10 +16,10 @@
       <tr>
         <td><%= civilian_interest.civilian.first_name %> <%= civilian_interest.civilian.last_name %></td>
         <td><%= civilian_interest.interest.name %></td>
-        <td><%= link_to 'Show', civilian_interest %></td>
+        <td class="bttn"><%= link_to 'Show', civilian_interest %></td>
 	<% if can_access? %>
-        	<td><%= link_to 'Edit', edit_civilian_interest_path(civilian_interest) %></td>
-        	<td><%= link_to 'Destroy', civilian_interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        	<td class="bttn"><%= link_to 'Edit', edit_civilian_interest_path(civilian_interest) %></td>
+        	<td class="bttn"><%= link_to 'Destroy', civilian_interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	<%end%>
       </tr>
     <% end %>
@@ -29,5 +29,7 @@
 <br>
 
 <% if can_access? %>
-	<%= link_to 'New Civilian interest', new_civilian_interest_path %>
+	<div class="bttn bttn--new">
+		<%= link_to 'New Civilian-Interest', new_civilian_interest_path %>
+	</div>
 <%end%>
