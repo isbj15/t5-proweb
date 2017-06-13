@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Civilian</th>
       <th>Size</th>
       <th>Brand</th>
@@ -15,11 +16,12 @@
   <tbody>
     <% @shoes.each do |shoe| %>
       <tr>
+        <td><%= shoe.id %></td>
         <td><%= shoe.civilian.first_name %> <%= shoe.civilian.last_name %></td>
         <td><%= shoe.size %></td>
         <td><%= shoe.brand %></td>
         <td><%= link_to 'Show', shoe %></td>
-	<% if current_user.role == "admin" %>
+	<% if can_access? %>
         	<td><%= link_to 'Edit', edit_shoe_path(shoe) %></td>
         	<td><%= link_to 'Destroy', shoe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	<%end%>
@@ -30,6 +32,6 @@
 
 <br>
 
-<% if current_user.role == "admin" %>
+<% if can_access? %>
 	<%= link_to 'New Shoe', new_shoe_path %>
 <%end%>

@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :civilian_id %><br>
-    <%= f.text_field :civilian_id %>
+    <%= f.text_field :civilian_id, :required => true %>
   </div>
   <div class="field">
     <%= f.label :job_name %><br>
-    <%= f.text_field :job_name %>
+    <%= f.text_field :job_name, :required => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

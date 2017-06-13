@@ -1,6 +1,6 @@
 class CiviliansController < ApplicationController
   before_action :set_civilian, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /civilians
   # GET /civilians.json
   def index

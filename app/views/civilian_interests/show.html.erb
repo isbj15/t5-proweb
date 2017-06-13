@@ -11,7 +11,7 @@
   <%= @civilian_interest.interest.name%>
 </p>
 
-<% if current_user.role == "admin" %>
+<% if can_access? %>
 	<%= link_to 'Edit', edit_civilian_interest_path(@civilian_interest) %> |
 <%end%>
 <%= link_to 'Back', civilian_interests_path %>

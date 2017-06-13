@@ -10,7 +10,7 @@
   <%= @interest.name %>
 </p>
 
-<% if current_user.role == "admin" %>
+<% if can_access? %>
 	<%= link_to 'Edit', edit_interest_path(@interest) %> |
 <%end%>
 <%= link_to 'Back', interests_path %>

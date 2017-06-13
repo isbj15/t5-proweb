@@ -24,7 +24,7 @@
         <td><%= civilian.city %></td>
 	<td><%= link_to 'Show', civilian %></td>
 
-	<% if current_user.role == "admin" %>
+	<% if can_access? %>
         	<td><%= link_to 'Edit', edit_civilian_path(civilian) %></td>
         	<td><%= link_to 'Destroy', civilian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	<%end%>
@@ -34,6 +34,6 @@
 </table>
 
 <br>
-<% if current_user.role == "admin" %>
+<% if can_access? %>
 	<%= link_to 'New Civilian', new_civilian_path %>
 <%end%>

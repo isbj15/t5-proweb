@@ -17,7 +17,7 @@
         <td><%= interest.id %></td>
         <td><%= interest.name %></td>
         <td><%= link_to 'Show', interest %></td>
-	<% if current_user.role == "admin" %>
+	<% if can_access? %>
         	<td><%= link_to 'Edit', edit_interest_path(interest) %></td>
         	<td><%= link_to 'Destroy', interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	<%end%>
@@ -28,6 +28,6 @@
 
 <br>
 
-<% if current_user.role == "admin" %>
+<% if can_access? %>
 	<%= link_to 'New Interest', new_interest_path %>
 <%end%>

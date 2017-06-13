@@ -16,7 +16,7 @@
   <%= @job.job_name %>
 </p>
 
-<% if current_user.role == "admin" %>
+<% if can_access? %>
 	<%= link_to 'Edit', edit_job_path(@job) %> |
 <%end%>
 <%= link_to 'Back', jobs_path %>
