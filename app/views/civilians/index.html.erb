@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Address</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @civilians.each do |civilian| %>
       <tr>
+        <td><%= civilian.id %></td>
         <td><%= civilian.first_name %></td>
         <td><%= civilian.last_name %></td>
         <td><%= civilian.address %></td>

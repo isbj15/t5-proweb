@@ -1,8 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>ID:</strong>
+  <%= @job.id %>
+</p>
+
+<p>
   <strong>Civilian:</strong>
-  <%= @job.civilian %>
+  <%= @job.civilian.first_name %>
+  <%= @job.civilian.last_name %>
 </p>
 
 <p>

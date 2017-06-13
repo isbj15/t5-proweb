@@ -2,12 +2,13 @@
 
 <p>
   <strong>Civilian:</strong>
-  <%= @civilian_interest.civilian %>
+  <%= @civilian_interest.civilian.first_name %>
+  <%= @civilian_interest.civilian.last_name %>
 </p>
 
 <p>
   <strong>Interest:</strong>
-  <%= @civilian_interest.interest %>
+  <%= @civilian_interest.interest.name%>
 </p>
 
 <% if current_user.role == "admin" %>

@@ -14,8 +14,8 @@
   <tbody>
     <% @civilian_interests.each do |civilian_interest| %>
       <tr>
-        <td><%= civilian_interest.civilian %></td>
-        <td><%= civilian_interest.interest %></td>
+        <td><%= civilian_interest.civilian.first_name %> <%= civilian_interest.civilian.last_name %></td>
+        <td><%= civilian_interest.interest.name %></td>
         <td><%= link_to 'Show', civilian_interest %></td>
 	<% if current_user.role == "admin" %>
         	<td><%= link_to 'Edit', edit_civilian_interest_path(civilian_interest) %></td>
