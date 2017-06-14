@@ -1,3 +1,7 @@
+<script>
+	alert("O novo usuário terá direitos de usuário comum. A menos que o campo 'role' seja alterado manualmente no banco de dados de 'user' para 'admin'.");
+</script>
+<div class="wrap--sign">
 <%= form_for @user do |f| %>
               <% if @user.errors.any? %>
               <div id="error_explanation">
@@ -11,19 +15,20 @@
                           </ul>
               </div>
   <% end %>
-              <div class="field">
-                          <%= f.label :login %>
+              <div class="field field--sign">
+                          <%= f.label :login %><br>
                           <%= f.text_field :login %>
               </div>
-              <div class="field">
-                          <%= f.label :password %>
+              <div class="field field--sign">
+                          <%= f.label :password %><br>
                           <%= f.password_field :password %>
               </div>
-              <div class="field">
-                          <%= f.label :password_confirmation %>
+              <div class="field field--sign">
+                          <%= f.label :password_confirmation %><br>
                           <%= f.password_field :password_confirmation %>
               </div>
-              <div class="actions">
+              <div class="actions action--sign">
                           <%= f.submit "Cadastrar"%>
               </div>
   <% end %>
+</div>

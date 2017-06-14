@@ -1,3 +1,13 @@
+<script>
+	if ((<%= request.referrer[-7..-1] == "sign_in"%>)) {
+		if(<%= can_access? %>) {
+			alert("Você tem direitos de administradori, ou seja, pode adicionar, editar e destruir os elementos de uma tabela.");
+		} else {
+			alert("Você só tem direitos de usuário comum, ou seja, você só pode visualizar os elementos da tabela.");
+		}
+}
+</script>
+
 <p id="notice"><%= notice %></p>
 <br>
 <h1>Civilians</h1>

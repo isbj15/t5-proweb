@@ -1,4 +1,4 @@
-<% unless request.path == sign_in_path %>
+<% unless (request.path == sign_in_path) or (request.path == "/users/new") %>
 <div class="wrapper-header">
   <header>
     <div>

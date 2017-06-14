@@ -1,3 +1,6 @@
+<script>
+		alert("Usuário administrador:\n\tlogin: admin\n\tsenha: admin\n\nUsuário comum:\n\tlogin: user1\n\tsenha: user1\n\nCaso seja criado um novo usuário, esse será um usuário comum, a menos que a flag 'role' seja alterada no banco de dados de 'user' para 'admin'.");
+</script>
 <br>
 <div class="wrap--sign">
 <%= form_for :session, url: sign_in_path do |f| %>
