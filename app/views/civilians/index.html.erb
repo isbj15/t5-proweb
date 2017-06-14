@@ -22,7 +22,7 @@
         <td><%= civilian.last_name %></td>
         <td><%= civilian.address %></td>
         <td><%= civilian.city %></td>
-	<td class="bttn"><%= link_to 'Show', civilian %></td>
+	<td class="bttn"><%= link_to 'Show', civilian, :onclick => 'alert(<%= @civilian.first_name %\>)' %></td>
 
 	<% if can_access? %>
         	<td class="bttn"><%= link_to 'Edit', edit_civilian_path(civilian) %></td>
@@ -34,6 +34,7 @@
 </table>
 
 <br>
+
 <% if can_access? %>
 	<div class="bttn bttn--new">
 		<%= link_to 'New Civilian', new_civilian_path %>

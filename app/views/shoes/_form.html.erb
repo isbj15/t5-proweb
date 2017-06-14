@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field field--edit">
     <%= f.label :civilian_id %><br>
     <%= f.text_field :civilian_id, :required => true %>
   </div>
-  <div class="field">
+  <div class="field field--edit">
     <%= f.label :size %><br>
     <%= f.number_field :size, :required => true %>
   </div>
-  <div class="field">
+  <div class="field field--edit">
     <%= f.label :brand %><br>
     <%= f.text_field :brand, :required => true %>
   </div>
-  <div class="actions">
+  <div class="actions actions--edit">
     <%= f.submit %>
   </div>
 <% end %>

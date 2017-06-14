@@ -53,6 +53,18 @@ header {
 	background: #363535;
 }
 
+.wrapper {
+        width: 85%;
+        height: 70%;
+        background: #dddddd;
+        color: black;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        position: relative;
+        margin-top: 75px;
+}
+
 body {
 	background: #4c8dc5;
 	color: white;
@@ -61,7 +73,25 @@ body {
 }
 
 .content {
+	height: 250px;
 	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+}
+
+.field--edit {
+        font-size: 15px;
+}
+
+.field--edit input {
+	width: 100%;
+}
+
+.actions--edit {
+        text-align: right;
+        margin-bottom: 15px;
 }

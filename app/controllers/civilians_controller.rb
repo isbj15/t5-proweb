@@ -1,4 +1,5 @@
 class CiviliansController < ApplicationController
+  include ActiveModel::Dirty
   before_action :set_civilian, only: [:show, :edit, :update, :destroy]
   
   # GET /civilians

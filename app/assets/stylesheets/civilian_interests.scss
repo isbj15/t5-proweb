@@ -1,16 +1,6 @@
 // Place all the styles related to the civilians controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.wrapper {
-        width: 85%;
-        height: 70%;
-        background: #dddddd;
-        color: black;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-}
-
 td, th {
 	border: 1px black solid;
 	width: 10%;
@@ -39,3 +29,22 @@ td, th {
 	color: #ffffff;
 	text-decoration: none;
 }
+
+.show--ci, .edit--ci {
+        width: 50%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50p;
+
+        p {
+                line-height: 20px;
+                font-size: 20px;
+                text-align: left;
+        }
+}
+
+.edit--ci {
+        width: 35%;
+}
+
